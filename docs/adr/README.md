@@ -84,4 +84,11 @@ What we chose, in one or two sentences.
 
 | ADR | Title | Status |
 |-----|-------|--------|
-| — | *Add ADR-0001 when you make the first cross-cutting architecture choice* | — |
+| [ADR-0001](0001-client-server-web-architecture.md) | Client–server web architecture for the warehouse system | Proposed |
+| [ADR-0002](0002-role-based-security.md) | Role-based access with store and route ownership scopes | Proposed |
+| [ADR-0003](0003-mysql-relational-database.md) | MySQL relational database with Sequelize | Proposed |
+| [ADR-0004](0004-vue-vuetify-spa.md) | Vue 3 + Vuetify single-page app for every role | Proposed |
+| [ADR-0005](0005-node-express-rest-api.md) | Node.js + Express REST API with one error contract | Proposed |
+| [ADR-0006](0006-automatic-reorder-policy.md) | Automatic reordering with a min/max inventory-position policy | Proposed |
+| [ADR-0007](0007-order-status-state-machines.md) | Order status state machines | Proposed |
+| [ADR-0008](0008-inventory-stock-lots-fifo.md) | Inventory as stock lots with FIFO picking | Proposed |
