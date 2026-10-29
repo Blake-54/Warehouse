@@ -1,6 +1,6 @@
 # Feature 5 screens
 
-Exported from Figma (PNG, 2x). Spec: [feature-5-supplier-ordering-receiving.md](../../../features/feature-5-supplier-ordering-receiving.md#screen-requirements)
+Screen mockups (PNG, 2x). Spec: [feature-5-supplier-ordering-receiving.md](../../../features/feature-5-supplier-ordering-receiving.md#screen-requirements)
 
 | Screen | Image |
 |--------|-------|

@@ -1,6 +1,6 @@
 # Feature 3 screens
 
-Exported from Figma (PNG, 2x). Spec: [feature-3-supplier-management.md](../../../features/feature-3-supplier-management.md#screen-requirements)
+Screen mockups (PNG, 2x). Spec: [feature-3-supplier-management.md](../../../features/feature-3-supplier-management.md#screen-requirements)
 
 | Screen | Image |
 |--------|-------|

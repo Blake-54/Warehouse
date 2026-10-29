@@ -1,14 +1,12 @@
 # UI design — Warehouse Management System
 
-The screen designs are made in **Figma**. This folder holds the exported images, one sub-folder per feature, plus the screen hierarchy and flow. The **Screen Requirements** section in each feature spec is still the source of truth for labels, buttons, and states; the images show the layout.
-
-**Figma file:** _paste the Figma link here (Share → Copy link, "Anyone with the link can view")_
+Screen mockups for every screen in the feature specs, one sub-folder per feature, plus the screen hierarchy and the main screen flows. The **Screen Requirements** section in each feature spec is the source of truth for labels, buttons, and states; the images show the layout.
 
 ---
 
 ## 1. Screen hierarchy
 
-Export as `docs/ui/screen-hierarchy.png`.
+![Screen hierarchy](./screen-hierarchy.png)
 
 ```text
 Login  (F1)
@@ -49,9 +47,9 @@ Login  (F1)
 
 ---
 
-## 2. Screen flows (Figma prototype)
+## 2. Screen flows
 
-Export the prototype overview as `docs/ui/screen-flow.png`, and put the prototype link at the top of this file. Make at least flows **A** and **B** clickable.
+![Screen flows](./screen-flow.png)
 
 | Flow | Steps |
 |------|-------|
@@ -66,9 +64,9 @@ Export the prototype overview as `docs/ui/screen-flow.png`, and put the prototyp
 
 ## 3. Screen inventory and image files
 
-Frame sizes: **Desktop 1440 × 900** unless noted. Floor screens use **Tablet 1024 × 768**; the driver screen uses **Phone 390 × 844**.
+Sizes: **Desktop 1280 × 800** unless noted. Floor screens use **Tablet 1024 × 768**; the driver screen uses **Phone 390 × 844**.
 
-| Feature | Screen | Frame | Export to | Spec |
+| Feature | Screen | Size | Image | Spec |
 |---------|--------|-------|-----------|------|
 | F1 | Login | Desktop | `feature-1/login.png` | [Feature 1](../../features/feature-1-user-login.md#screen-requirements) |
 | F1 | Home (show the office-worker version) | Desktop | `feature-1/home.png` | 〃 |
@@ -93,41 +91,24 @@ Frame sizes: **Desktop 1440 × 900** unless noted. Floor screens use **Tablet 10
 | F7 | Route Assignments | Desktop | `feature-7/route-assignments.png` | 〃 |
 | F7 | My Route | Phone | `feature-7/my-route.png` | 〃 |
 
-**Export:** select the frame → **Export** panel (right side) → **PNG**, **2x** → save with the file name above.
 
 ---
 
-## 4. Layout notes per screen (what to draw)
+## 4. Visual style
 
-Use the exact labels from each feature's **Screen Requirements**. Shared pieces to build once as Figma **components**: MenuBar, page header (title + primary button), data table row, status chip, confirm dialog, error alert.
-
-- **MenuBar:** maroon bar, "Warehouse" on the left; on the right, user name, role chip, and **Sign out**. Hidden on Login.
-- **Login:** centered card (~400 px wide) with title **Warehouse Sign In**, Username, Password with eye icon, full-width **Sign in**; show the error alert state in a second frame.
-- **Home:** **Welcome, {name}** heading + role chip; grid of large cards (icon + title + one-line description).
-- **Lists (Items, Suppliers, Customers, Supplier Orders, Customer Orders, Truck Routes):** page title left, primary **+ New …** button right, search/filter row, table, icon actions at the end of each row. Draw one frame with data and one **empty state**.
-- **Dialogs:** ~560 px wide card over a dimmed page; title, fields, **Cancel** (text) + primary button (maroon).
-- **Receive Order:** a table with a number input in **Cases Received Now**, an orange "2 cases short" text, and a **+ Split location** link that shows a second Aisle/Side/Cases row.
-- **New Order:** catalog table on the left (one row with a red **Out of stock** chip and a disabled **Add**); cart card on the right with lines, total, and **Submit Order**.
-- **Pick List:** big rows, sorted by Aisle → Side; a **Picked** number input and **Record** button per row; a green check on recorded rows; a progress bar and **Finish Picking** at the bottom.
-- **My Route:** phone frame; header card with route, truck, and date; one card per store with **Mark Shipped**; a **Shipped** chip state.
-
----
-
-## 5. Design tokens (match the code)
-
-From [ui-style-system.mdc](../../.cursor/rules/ui-style-system.mdc). Create these as Figma color and text styles:
+Deliberately plain: one light-blue palette, a system sans-serif font, and the same table, dialog, and chip patterns on every screen.
 
 | Token | Hex | Use |
 |-------|-----|-----|
-| primary | `#801328` | MenuBar, primary buttons, headings |
-| primary-container | `#FFDAD9` | Chips, selected rows |
-| secondary | `#775656` | Secondary buttons, icons |
-| surface | `#F9F9FF` | Cards and dialogs |
-| surface-variant | `#E7E0E1` | Table header fill, dividers |
-| background | `#FFFFFF` | Page |
-| outline | `#857373` | Borders |
-| body text | `#1C1B1F` | Body |
+| primary | `#3B82C4` | Top bar, primary buttons |
+| primary-dark | `#2A6496` | Headings, table header text |
+| light | `#E8F3FC` | Table headers, chips, highlights |
+| background | `#F5FAFF` | Page |
+| border | `#C9DFF2` | Table lines, inputs, cards |
+| text | `#1F2D3D` | Body text |
 
-Status chip colors (suggested): New = blue, Picking = amber, Picked = teal, Shipped = green, Cancelled = grey; Open = blue, Partial = amber, Received = green, Closed = grey.
+Status chips: New/Open = light blue, Picking/Partial = amber, Picked = teal, Shipped/Received = green, Cancelled/Closed = grey. Shortages show in amber; out-of-stock and errors in red.
 
-Type: **Inter**; 16 px body; headings 700 weight in primary (20 / 25 / 31 px). Corner radius **8 px** everywhere. Spacing on a 4 px grid (8, 16, 24, 32).
+Font: Arial / Helvetica, 14 px body, 22 px page titles. Corners 6–8 px. Spacing on a 4 px grid.
+
+> These colors replace the maroon defaults in `.cursor/rules/ui-style-system.mdc`; update that rule's color table when the app is built.

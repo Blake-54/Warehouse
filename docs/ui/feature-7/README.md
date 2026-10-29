@@ -1,6 +1,6 @@
 # Feature 7 screens
 
-Exported from Figma (PNG, 2x). Spec: [feature-7-shipping-routes.md](../../../features/feature-7-shipping-routes.md#screen-requirements)
+Screen mockups (PNG, 2x). Spec: [feature-7-shipping-routes.md](../../../features/feature-7-shipping-routes.md#screen-requirements)
 
 | Screen | Image |
 |--------|-------|

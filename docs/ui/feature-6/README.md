@@ -1,6 +1,6 @@
 # Feature 6 screens
 
-Exported from Figma (PNG, 2x). Spec: [feature-6-customer-ordering-picking.md](../../../features/feature-6-customer-ordering-picking.md#screen-requirements)
+Screen mockups (PNG, 2x). Spec: [feature-6-customer-ordering-picking.md](../../../features/feature-6-customer-ordering-picking.md#screen-requirements)
 
 | Screen | Image |
 |--------|-------|
